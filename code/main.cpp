@@ -63,8 +63,7 @@ void handle_client(int client_socket) {
   }
 }
 
-int main()
-{
+int main() {
   const int port = SERVER_PORT;
 
   // Platform-specific socket initialization
