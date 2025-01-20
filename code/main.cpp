@@ -16,6 +16,8 @@
 #include <arpa/inet.h>
 #endif
 
+#define SERVER_PORT 8080
+
 const std::string HTTP_RESPONSE =
 "HTTP/1.1 200 OK\r\n"
 "Content-Type: text/plain\r\n"
@@ -61,8 +63,9 @@ void handle_client(int client_socket) {
   }
 }
 
-int main() {
-  const int port = 8080;
+int main()
+{
+  const int port = SERVER_PORT;
 
   // Platform-specific socket initialization
 #ifdef _WIN32
